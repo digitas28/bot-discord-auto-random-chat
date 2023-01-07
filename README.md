@@ -20,6 +20,6 @@
   5. write in discord chat `!ikuzo <number of messages>`
     
 # NOTE
-  You can edit message in line 46 main.py
+  You can edit messages in line 46 main.py
   
 # DWYOR
