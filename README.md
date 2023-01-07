@@ -22,4 +22,4 @@
 # NOTE
   You can edit messages in line 46 main.py
   
-<h2 align="center">!!! DWYOR !!!e</h2>
+<h2 align="center">!!! DWYOR !!!</h2>
