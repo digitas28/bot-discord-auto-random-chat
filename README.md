@@ -13,9 +13,9 @@
   1. Dowload and install Termux
   2. input your token discord in Config.json file
   3. input this command in termux:
-     pkg install python3
-     pip install -r requirements.txt
-     python3 main.py
+     <q>pkg install python3</q>
+     <q>pip install -r requirements.txt</q>
+     <q>python3 main.py</q>
   4. input delay chat and delay delete message in seconds
   5. write in discord chat `!ikuzo <number of messages>`
     
