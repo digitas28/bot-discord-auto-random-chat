@@ -19,4 +19,7 @@
   4. input delay chat and delay delete message in seconds
   5. write in discord chat `!ikuzo <number of messages>`
     
+# NOTE
+  You can edit message in line 46 main.py
+  
 # DWYOR
