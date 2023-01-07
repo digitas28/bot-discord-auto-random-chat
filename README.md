@@ -1,5 +1,5 @@
 # bot-discord-auto-random-chat
-<h3 align="center">Auto sends random message every time</h3>
+<h3 align="center">Auto Sends Random Message Every Time</h3>
 
 # TUTORIAL FOR WINDOWS
   1. Download and install python
