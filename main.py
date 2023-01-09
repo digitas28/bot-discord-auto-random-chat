@@ -73,12 +73,11 @@ async def ikuzo(ctx,amount: int):
     convert = str(datetime.timedelta(seconds = sec))
     print(f"\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Sending {Fore.WHITE}{msgsend} {Fore.LIGHTBLACK_EX}messages\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Estimated Time: {Fore.WHITE}{convert}\n")
     while msgsend > 0:
-        try:
-            msgsend -= 1          
+        try:    
+            msgsend -= 1  
             output = random.choice(chat_list)
             await ctx.send(output)  
-            print(f"{Fore.WHITE}[ {Fore.GREEN}+ {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Message success sent = {Fore.WHITE}#{msgsend} {output}{Fore.LIGHTBLACK_EX} | Messages left to send: {Fore.WHITE}{msgsend} {Fore.LIGHTBLACK_EX}")
-                      
+            print(f"{Fore.WHITE}[ {Fore.GREEN}+ {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Message success sent = {Fore.WHITE}#{msgsend + 1} {output}{Fore.LIGHTBLACK_EX} | Messages left to send: {Fore.WHITE}{msgsend} {Fore.LIGHTBLACK_EX}")                 
         except:
             print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot send message {Fore.WHITE}#{msgsend}")
             pass
@@ -86,13 +85,14 @@ async def ikuzo(ctx,amount: int):
         async for message in ctx.message.channel.history(limit=1).filter(lambda m: m.author == client.user).map(lambda m: m):
             try:
                 await message.delete()
-                print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Success delete message = {Fore.WHITE}{output}")
+                print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Success delete message = {Fore.WHITE}#{msgsend + 1} {output}")
             except:
-                print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot delete message {Fore.WHITE}#{msgsend} {output}")
+                print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot delete message {Fore.WHITE}#{msgsend + 1} {output}")
                 pass
-            if msgsend == 0:
-                print(f"\n{Fore.WHITE}[ {Fore.GREEN}+ {Fore.WHITE}] {Fore.LIGHTBLACK_EX}All messages was sent")  
+        if msgsend == 0:
+            print(f"\n{Fore.WHITE}[ {Fore.GREEN}+ {Fore.WHITE}] {Fore.LIGHTBLACK_EX}All messages was sent")
         await asyncio.sleep(setdelay)
+    
     return
 
 
