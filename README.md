@@ -18,6 +18,8 @@
      <q>termux-setup-storage</q><br>
      <q>git clone https://github.com/mityoe860/bot-discord-auto-random-chat</q><br>
      <q>pkg install python3</q><br>
+     <q>pip install -U discord==1.7.3</q><br>
+     <q>pip install -U discord.py==1.7.3</q><br>
      cd to your bot-discord-auto-random-chat folder</br>
      <q>pip install -r requirements.txt</q><br>
      <q>python3 main.py</q><br>
