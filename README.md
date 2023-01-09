@@ -2,7 +2,7 @@
 <h3 align="center">Auto Sends Random Message Every Time</h3>
 
 # TUTORIAL FOR WINDOWS
-  1. Download and install python
+  1. download and install python
   2. download or git clone https://github.com/mityoe860/bot-discord-auto-random-chat
   3. input your token discord in Config.json file
   4. open install.bat
@@ -11,7 +11,7 @@
   7. write in discord chat `!ikuzo <number of messages>`
   
 # TUTORIAL FOR ANDROID
-  1. Dowload and install Termux
+  1. dowload and install Termux
   2. input your token discord in Config.json file
   3. input this command in termux:<br>
      <q>apt update && apt upgrade</q><br>
