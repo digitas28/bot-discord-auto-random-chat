@@ -79,7 +79,7 @@ async def ikuzo(ctx,amount: int):
             await ctx.send(output)  
             print(f"{Fore.WHITE}[ {Fore.GREEN}+ {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Message success sent = {Fore.WHITE}#{msgsend + 1} {output}{Fore.LIGHTBLACK_EX} | Messages left to send: {Fore.WHITE}{msgsend} {Fore.LIGHTBLACK_EX}")                 
         except:
-            print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot send message {Fore.WHITE}#{msgsend}")
+            print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot send message {Fore.WHITE}#{msgsend + 1}")
             pass
         await asyncio.sleep(1)
         async for message in ctx.message.channel.history(limit=1).filter(lambda m: m.author == client.user).map(lambda m: m):
