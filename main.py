@@ -43,7 +43,7 @@ def Init():
             exit()
 
 
-chat_list = ['i am atomic','hello siir','hello', 'gm','lfg','good morning','lets go','gogogo','where are u from?','good project','want to play with me?','nice']
+chat_list = ['i am atomic','hello siir','hello', 'gm','lfg','good morning','lets go','gogogo','where are u from?','good project','want to play with me?','nice','night all','nice to meet you','we can do it','are you watch anime?','i like you all']
 
 os.system('cls')
 result = pyfiglet.figlet_format("""Discord Auto Random Chat""", font = "graceful"  )
@@ -74,10 +74,11 @@ async def ikuzo(ctx,amount: int):
     print(f"\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Sending {Fore.WHITE}{msgsend} {Fore.LIGHTBLACK_EX}messages\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Estimated Time: {Fore.WHITE}{convert}\n")
     while msgsend > 0:
         try:
-            msgsend -= 1
+            msgsend -= 1          
             output = random.choice(chat_list)
-            await ctx.send(output)
+            await ctx.send(output)  
             print(f"{Fore.WHITE}[ {Fore.GREEN}+ {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Message success sent = {Fore.WHITE}#{msgsend} {output}{Fore.LIGHTBLACK_EX} | Messages left to send: {Fore.WHITE}{msgsend} {Fore.LIGHTBLACK_EX}")
+                      
         except:
             print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot send message {Fore.WHITE}#{msgsend}")
             pass
@@ -85,12 +86,12 @@ async def ikuzo(ctx,amount: int):
         async for message in ctx.message.channel.history(limit=1).filter(lambda m: m.author == client.user).map(lambda m: m):
             try:
                 await message.delete()
-                print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Success delete message = {Fore.WHITE}{output}\n")
+                print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Success delete message = {Fore.WHITE}{output}")
             except:
                 print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot delete message {Fore.WHITE}#{msgsend} {output}")
                 pass
             if msgsend == 0:
-                print(f"\n{Fore.WHITE}[ {Fore.GREEN}+ {Fore.WHITE}] {Fore.LIGHTBLACK_EX}All messages was sent")
+                print(f"\n{Fore.WHITE}[ {Fore.GREEN}+ {Fore.WHITE}] {Fore.LIGHTBLACK_EX}All messages was sent")  
         await asyncio.sleep(setdelay)
     return
 
