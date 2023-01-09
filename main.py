@@ -58,7 +58,6 @@ print (colored('+===================== BOT START! ========================+', 'r
 while True:
         try:
             setdelay = int(input("Please input delay time chat in seconds = "))
-            setdeletemsg = int(input("\nPlease input delay time delete chat in seconds = "))
             break
         except:
             print("ONLY USE NUMBER!")
@@ -70,7 +69,7 @@ print (colored('\nWrite on discord chat: \n!ikuzo <number of messages>', 'cyan',
 async def ikuzo(ctx,amount: int):
     await ctx.message.delete()
     msgsend = amount
-    sec = (setdelay + setdeletemsg) * msgsend
+    sec = setdelay * msgsend
     convert = str(datetime.timedelta(seconds = sec))
     print(f"\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Sending {Fore.WHITE}{msgsend} {Fore.LIGHTBLACK_EX}messages\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Estimated Time: {Fore.WHITE}{convert}\n")
     while msgsend > 0:
@@ -82,7 +81,7 @@ async def ikuzo(ctx,amount: int):
         except:
             print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot send message {Fore.WHITE}#{msgsend}")
             pass
-        await asyncio.sleep(setdeletemsg)
+        await asyncio.sleep(1)
         async for message in ctx.message.channel.history(limit=1).filter(lambda m: m.author == client.user).map(lambda m: m):
             try:
                 await message.delete()
