@@ -12,7 +12,7 @@
   
 # TUTORIAL FOR ANDROID
   1. dowload and install Termux
-  2. input your token discord in Config.json file
+  2. input your token discord in Config.json file (in folder bot-discord-auto-random-chat)
   3. input this command in termux:<br>
      <q>apt update && apt upgrade</q><br>
      <q>termux-setup-storage</q><br>
