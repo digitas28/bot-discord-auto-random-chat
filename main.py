@@ -82,7 +82,7 @@ async def ikuzo(ctx,amount: int):
             print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Cannot send message {Fore.WHITE}#{msgsend + 1}")
             pass
         await asyncio.sleep(1)
-        async for message in ctx.message.channel.history(limit=1).filter(lambda m: m.author == client.user).map(lambda m: m):
+        async for message in ctx.message.channel.history(limit=1).filter(lambda m: m.author == client.user):
             try:
                 await message.delete()
                 print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Success delete message = {Fore.WHITE}#{msgsend + 1} {output}")
