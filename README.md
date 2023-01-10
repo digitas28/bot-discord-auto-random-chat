@@ -7,7 +7,7 @@
   3. input your token discord in Config.json file
   4. open install.bat
   5. open start.bat
-  6. input delay chat and delay delete message in seconds
+  6. input delay chat message in seconds
   7. write in discord chat `!ikuzo <number of messages>`
   
 # TUTORIAL FOR ANDROID
@@ -23,7 +23,7 @@
      cd to your bot-discord-auto-random-chat folder</br>
      <q>pip install -r requirements.txt</q><br>
      <q>python3 main.py</q><br>
-  4. input delay chat and delay delete message in seconds
+  4. input delay chat message in seconds
   5. write in discord chat `!ikuzo <number of messages>`
     
 # NOTE
