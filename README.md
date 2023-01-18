@@ -28,7 +28,7 @@
     
 # NOTE
   1. You can edit or add messages in line 46 file main.py
-  2. Auto delete messages only delete when above your message is your own message. if you don't want like it, you can delete "Limit=1" in line 87 file main.py
+  2. Auto delete messages only delete when above your message is your own message. if you don't want like it, you can delete "Limit=1" in line 87 file main.py<br>
      it will make your messages instantly delete
   
 <h2 align="center">!!! DWYOR !!!</h2>
