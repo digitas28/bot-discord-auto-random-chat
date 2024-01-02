@@ -43,7 +43,7 @@ def Init():
             exit()
 
 
-chat_list = ['i am atomic','hello siir','hello', 'gm','lfg','good morning','lets go','gogogo','where are u from?','good project','want to play with me?','nice','night all','nice to meet you','we can do it','are you watch anime?','i like you all']
+chat_list = ['i am atomic','hello siir','hello', 'gm','lfg','good morning','lets go','gogogo','where are u from?','good project','want to play with me?','nice','night all','nice to meet you','we can do it','are you watch anime?','i like you all','quck quack quackk baby','lets goo quack quack']
 
 os.system('cls')
 result = pyfiglet.figlet_format("""Discord Auto Random Chat""", font = "graceful"  )
